@@ -1073,7 +1073,8 @@ html, body {
   letter-spacing: 0.01rem;
   background-color: var(--bg-body);
   transition: color 400ms ease-in-out 0s, background-color 400ms ease-in-out 0s;
-  font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
+  /* font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif */
+  font-family:  "Times New Roman", Times, serif;
 }
 
 body.hidden {
@@ -1307,17 +1308,22 @@ a:hover {
 }
 
 .navbar {
-  margin-left: calc(100vw - 100%);
+  /* margin-left: calc(100vw - 100%); */
+  margin-left: 25%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  align-items: flex-start;
+  /* justify-content: center; */
+  justify-content: flex-start;
 }
 
 .navbar ul li {
   position: relative;
   display: inline-block;
-  margin: 0 15px;
-  font-size: 1.65rem;
+  /* margin: 0 15px; */
+  margin: 0 50px 0 0;
+  /* font-size: 1.65rem; */
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
 }
@@ -1330,11 +1336,14 @@ a:hover {
   content: "";
   position: absolute;
   bottom: 3px;
-  left: 5px;
-  height: 6px;
+  /* left: 5px; */
+  left: 0px;
+  /* height: 6px; */
+  height: 1px;
   opacity: 0.45;
   background-color: gray;
-  width: 89%;
+  /* width: 89%; */
+  width: 100%;
 }
 
 .navbar ul li.active a {
@@ -1342,14 +1351,14 @@ a:hover {
 }
 
 .navbar ul li.active a::after {
-  content: "";
+  /* content: "";
   position: absolute;
   bottom: 3px;
   left: 5px;
   height: 6px;
   opacity: 0.55;
   background-color: gray;
-  width: 89%;
+  width: 89%; */
 }
 
 @media (max-width: 888px) {
