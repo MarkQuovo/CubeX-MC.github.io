@@ -1,0 +1,48 @@
+/* 基础样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #2d2d2d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#server-ip {
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+}
+
+/* 在线玩家列表 */
+#player-list {
+    list-style: none;
+    padding: 0;
+}
+
+#player-list li {
+    padding: 8px;
+    margin: 5px 0;
+    background: #3a3a3a;
+    border-radius: 5px;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
