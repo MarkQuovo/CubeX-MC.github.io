@@ -3,7 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
-    background: #1a1a1a;
+    background: url('../imgs/commune.png') no-repeat center center fixed; /* 添加背景图片 */
+    background-size: cover; /* 使背景图片覆盖整个页面 */
     color: #fff;
 }
 

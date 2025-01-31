@@ -119,5 +119,5 @@ async function fetchServerStatus() {
 // 页面加载后自动刷新状态
 document.addEventListener('DOMContentLoaded', () => {
     fetchServerStatus();
-    setInterval(fetchServerStatus, 10000); // 每10秒刷新一次
+    setInterval(fetchServerStatus, 600000); // 每10秒刷新一次
 });
