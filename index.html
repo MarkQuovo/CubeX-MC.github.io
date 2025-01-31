@@ -30,6 +30,24 @@
         .text-shadow {
             text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
         }
+        .container {
+            margin-top: 2rem;
+        }
+        .navbar-nav {
+            margin-right: 0;
+        }
+        .navbar-nav .nav-link {
+            margin-right: 1rem;
+        }
+        .row.text-center {
+            margin-bottom: 2rem;
+        }
+        .card h2 {
+            margin-bottom: 1rem;
+        }
+        footer {
+            margin-top: 4rem;
+        }
     </style>
 </head>
 <body>
@@ -60,7 +78,7 @@
     <div class="container">
         <!-- 标题和IP -->
         <div class="row text-center">
-            <h1 class="text-shadow" style="margin-top: 10vh; margin-bottom: 1vh;">
+            <h1 class="text-shadow">
                 <b><span style="color:rgb(202, 0, 0)">Cube</span>X</b> 养老服务器
             </h1>
             <p class="text-shadow"><b>IP：play.cubexmc.net (Java)</b></p>
@@ -78,7 +96,7 @@
         </div>
 
         <!-- 服务器状态 -->
-        <div class="row text-center" style="margin-top: 2rem;">
+        <div class="row text-center">
             <div class="card">
                 <h2>🟢 实时状态</h2>
                 <div id="server-status">
@@ -90,7 +108,7 @@
         </div>
 
         <!-- 在线玩家列表 -->
-        <div class="row text-center" style="margin-top: 2rem;">
+        <div class="row text-center">
             <div class="card">
                 <h2>👥 在线玩家</h2>
                 <ul id="player-list">
@@ -100,7 +118,7 @@
         </div>
 
         <!-- 管理团队 -->
-        <div class="row text-center" style="margin-top: 2rem;">
+        <div class="row text-center">
             <div class="card">
                 <h2>👑 管理团队</h2>
                 <p>
@@ -113,7 +131,7 @@
         </div>
 
         <!-- 建筑团队 -->
-        <div class="row text-center" style="margin-top: 2rem;">
+        <div class="row text-center">
             <div class="card">
                 <h2>🏗️ 建筑团队</h2>
                 <p>qorhe | wudimoyuren</p>
@@ -122,7 +140,7 @@
     </div>
 
     <!-- 页脚 -->
-    <footer class="text-center" style="margin-top: 2rem; padding: 1rem; background-color: #2d2d2d;">
+    <footer class="text-center">
         <p>© 2023 方块叉 CubeX | 由 GitHub Pages 托管</p>
     </footer>
 
@@ -131,23 +149,26 @@
     <script>
         // 获取服务器状态
         async function fetchServerStatus() {
-            const SERVER_IP = 'play.cubexmc.net'; // 修改为你的服务器IP
+            const SERVER_IP = 'play.cubexmc.top'; // 修改为你的服务器IP
             const API_URL = `https://api.mcsrvstat.us/2/${SERVER_IP}`;
 
             try {
                 const response = await fetch(API_URL);
                 const data = await response.json();
 
+                // 添加调试信息
+                console.log('API Response:', data);
+
                 // 更新服务器状态
                 document.getElementById('status').textContent = data.online ? '在线' : '离线';
-                document.getElementById('online-players').textContent = data.players.online;
-                document.getElementById('max-players').textContent = data.players.max;
-                document.getElementById('server-version').textContent = data.version;
+                document.getElementById('online-players').textContent = data.players ? data.players.online : '0';
+                document.getElementById('max-players').textContent = data.players ? data.players.max : '0';
+                document.getElementById('server-version').textContent = data.version || '未知';
 
                 // 更新在线玩家列表
                 const playerList = document.getElementById('player-list');
                 playerList.innerHTML = '';
-                if (data.players.list) {
+                if (data.players && data.players.list && data.players.list.length > 0) {
                     data.players.list.forEach(player => {
                         const li = document.createElement('li');
                         li.textContent = player;
