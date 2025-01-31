@@ -2,7 +2,6 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
     background: url('../imgs/commune.png') no-repeat center center fixed; /* 添加背景图片 */
     background-size: cover; /* 使背景图片覆盖整个页面 */
     color: #fff;
@@ -49,15 +48,6 @@ header {
 }
 
 /* 新增样式 */
-.hidden {
-    display: none;
-}
-
-.navbar-dark {
-    background-color: #2d2d2d;
-    height: 50px; /* 减小导航栏高度 */
-}
-
 .btn {
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
 }
@@ -76,11 +66,11 @@ header {
 
 .navbar-nav .nav-link {
     margin-right: 0.5rem; /* 减小导航栏链接之间的间距 */
-    font-size: 0.8rem; /* 减小导航栏字体大小 */
+    font-size: 1rem; /* 放大导航栏字体大小 */
 }
 
 .navbar-brand {
-    font-size: 1rem; /* 调整品牌名称字体大小 */
+    font-size: 1.2rem; /* 放大品牌名称字体大小 */
 }
 
 .row.text-center {
@@ -94,3 +84,4 @@ header {
 footer {
     margin-top: 4rem;
 }
+
