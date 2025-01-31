@@ -6,16 +6,13 @@
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <title>方块叉 CubeX</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
-    <style>
-        .hidden {
-            /* display: none; */
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imgs/server-icon.png" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-md navbar-dark">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
             <a href="#" class="navbar-brand">
                 <img src="imgs/server-icon.png" alt="CubeX icon" width="32" height="32" class="d-inline-block align-bottom">
                 <span class="hidden"><b>方块叉 CubeX</b></span>
@@ -45,6 +42,7 @@
                     <li>
                         <a class="nav-link" href="html/report.html">工单</a>
                     </li>
+                    <li>
                         <a class="nav-link" target="_blank" href="https://afdian.net/@cubex">捐款</a>
                     </li>
                     <li>
@@ -55,63 +53,87 @@
                     </li>
                 </ul>
             </div>
-        </nav>
-    </div>
-    <div class="container" style="color: white;">
-        <div class="row text-center">
-            <h1 style="margin-top: 10vh; margin-bottom: 1vh; color: rgb(255, 255, 255); text-shadow: 1px 1px 1px rgb(0,0,0,0.5);"><b><span style="color:rgb(202, 0, 0)">Cube</span>X</b> 养老服务器</h1>
         </div>
+    </nav>
+
+    <div class="container">
+        <!-- 标题和IP -->
+        <div class="row text-center mt-5">
+            <h1 class="text-shadow">
+                <b><span style="color:rgb(202, 0, 0)">Cube</span>X</b> 养老服务器
+            </h1>
+            <p class="text-shadow"><b>IP：play.cubexmc.net (Java)</b></p>
+            <p class="text-shadow"><b>QQ群：470579814</b></p>
+        </div>
+
+        <!-- 按钮 -->
+        <div class="row text-center mb-5">
+            <div class="d-flex justify-content-center">
+                <a target="_blank" href="https://www.bilibili.com/video/BV1Je411V7ko/" class="btn btn-danger btn-custom-size me-2">
+                    <b>宣传片</b>
+                </a>
+                <a target="_blank" href="https://pan.baidu.com/s/1QdntVzwvBSVLxp_YxAa_Ug?pwd=cube" class="btn btn-light btn-custom-size">
+                    <b>整合包</b>
+                </a>
+            </div>
+        </div>
+
+        <!-- 服务器状态和在线玩家列表 -->
         <div class="row">
-            <div class="col text-center">
-                <p style="color: rgb(255, 255, 255); text-shadow: 1px 1px 1px rgb(0,0,0,0.5); margin-bottom: 1vh;"><b>IP：play.cubexmc.net (java) </b></p>
-                <p style="color: rgb(255, 255, 255); text-shadow: 1px 1px 1px rgb(0,0,0,0.5); margin-bottom: 1vh"><b>QQ群：470579814</b></p>
-                <a target="_blank" href="https://www.bilibili.com/video/BV1Je411V7ko/" class="btn btn-danger" style="box-shadow: 0 1px 1px 0 rgb(0,0,0,0.5);" data-loading-text="Loading..." 
-                    type="button"> <b>宣传片</b>
-                </a>
-                <a target="_blank" href="https://pan.baidu.com/s/1QdntVzwvBSVLxp_YxAa_Ug?pwd=cube" class="btn btn-light" style="margin-left:1rem; box-shadow: 0 1px 1px 0 rgb(0,0,0,0.5);" data-loading-text="Loading..." 
-                    type="button"> <b>整合包</b>
-                </a>
-
-                <div class="row" style="margin-top: 2rem; opacity: 0.8">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
-                    </svg>
-                </div>
-                
-                <!-- staff -->
-                <div class="row" style="margin-top: 2rem;">
-                    <h4 style="color: rgb(255, 255, 255); text-shadow: 1px 1px 1px rgb(0,0,0,0.3); margin-bottom: 1%;">
-                        管理:</h4>
-                        <p style="color: rgb(255, 255, 255); text-shadow: 1px 1px 1px rgb(0,0,0,0.3); margin-bottom: 0%;">
-                        [退休]00
-                        | <a target="_blank" href="http://angushushu.com" style="text-decoration:none; color:white; margin-bottom: 0%;">[退休]angushushu</a>
-                        | [退休]AkariDream
-                        | fire_God
-                        | [退休]Furiina
-                        | [退休]heckteck<br>
-                        <a target="_blank" href="https://space.bilibili.com/3732751" style="text-decoration:none; color:white; margin-bottom: 0%;">[退休]linzaiua</a>
-                        | <a target="_blank" href="https://siyangchen.com/" style="text-decoration:none; color:white;margin-bottom: 0%;">SiYang</a> 
-                        | [退休]Tomeggo</a>
-                        | <a target="_blank" href="http://www.miaomoe.net" style="text-decoration:none; color:white;margin-bottom: 0%;">[退休]XY_kuailexy</a>
-                        | <a target="_blank" href="https://blog.hotwind.cc" style="text-decoration:none; color:white; margin-bottom: 0%;">HotWind</a><br>
-                        | <a target="_blank" href="https://adlambxd.github.io" style="text-decoration:none; color:white; margin-bottom: 0%;">yzh</a>
-                        | <a target="_blank" href="https://zh-cn.namemc.com/profile/NinKauneus.1" style="text-decoration:none; color:white; margin-bottom: 0%;">NinKauneus</a>
-                        | Mark_Q
-                        | <a target="_blank" href="adlambxd.github.io" style="text-decoration:none; color:white; margin-bottom: 0%;">AdLamb</a>
-
-                        </p>
-                    <h4 style="color: rgb(255， 255， 255); text-shadow: 1px 1px 1px rgb(0,0,0,0.3); margin-bottom: 1%;"><br>
-                        建筑:</h4>
-                        <p style="color: rgb(255, 255, 255); text-shadow: 1px 1px 1px rgb(0,0,0,0.3); margin-bottom: 0%;">
-                        qorhe
-                        | wudimoyuren
-                        </p>
+            <div class="col-md-6">
+                <div class="card">
+                    <h2 class="card-header">🟢 实时状态</h2>
+                    <div class="card-body">
+                        <p>状态: <span id="status">加载中...</span></p>
+                        <p>在线玩家: <span id="online-players">0</span>/<span id="max-players">20</span></p>
+                        <p>版本: <span id="server-version">加载中...</span></p>
+                        <h3 class="mt-4">👥 在线玩家</h3>
+                        <ul id="player-list">
+                            <li>正在获取玩家列表...</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="col">Col 2</div> -->
+            <div class="col-md-6">
+                <!-- 管理团队和建筑团队 -->
+                <div class="card mb-4">
+                    <h2 class="card-header">👑 退休团队</h2>
+                    <div class="card-body">
+                        <p>
+                            00 | <a target="_blank" href="http://angushushu.com" style="text-decoration:none; color:white;">angushushu</a> | AkariDream | [退休]Furiina | [退休]heckteck<br>
+                            [退休]linzaiua | <a target="_blank" href="https://siyangchen.com/" style="text-decoration:none; color:white;">SiYang</a> | [退休]Tomeggo<br>
+                            [退休]XY_kuailexy | <a target="_blank" href="https://blog.hotwind.cc" style="text-decoration:none; color:white;">HotWind</a><br>
+                            <a target="_blank" href="https://adlambxd.github.io" style="text-decoration:none; color:white;">yzh</a> | <a target="_blank" href="https://zh-cn.namemc.com/profile/NinKauneus.1" style="text-decoration:none; color:white;">NinKauneus</a> | [退休]Mark_Q | <a target="_blank" href="adlambxd.github.io" style="text-decoration:none; color:white;">AdLamb</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <h2 class="card-header">👷‍♂️ 在职团队</h2>
+                    <div class="card-body">
+                        <p>
+                            fire_God | HotWind | SiYang | yzh | NinKauneus | Mark_Q | AdLamb
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <h2 class="card-header">🚧 试用团队</h2>
+                    <div class="card-body">
+                        <p>
+                            qorhe | wudimoyuren
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- 页脚 -->
+        <footer class="text-center mt-5">
+            <p>© 2023 方块叉 CubeX | 由 GitHub Pages 托管</p>
+        </footer>
+
+        <!-- 脚本 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+    </div>
 </body>
 </html>

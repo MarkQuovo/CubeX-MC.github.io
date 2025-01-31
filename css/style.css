@@ -1,0 +1,91 @@
+/* 基础样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: url('../imgs/commune.png') no-repeat center center fixed; /* 添加背景图片 */
+    background-size: cover; /* 使背景图片覆盖整个页面 */
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#server-ip {
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+}
+
+/* 在线玩家列表 */
+#player-list {
+    list-style: none;
+    padding: 0;
+}
+
+#player-list li {
+    padding: 8px;
+    margin: 5px 0;
+    background: #3a3a3a;
+    border-radius: 5px;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* 新增样式 */
+.btn-custom-size {
+    padding: 8px 16px; /* 调整按钮的内边距 */
+    font-size: 0.9rem; /* 调整按钮的字体大小 */
+}
+
+.btn {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.container {
+    margin-top: 1rem; /* 调整容器顶部外边距 */
+}
+
+.navbar-nav {
+    margin-right: 0;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 0.5rem; /* 减小导航栏链接之间的间距 */
+    font-size: 1rem; /* 放大导航栏字体大小 */
+}
+
+.navbar-brand {
+    font-size: 1.2rem; /* 放大品牌名称字体大小 */
+}
+
+.row.text-center {
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin-top: 4rem;
+}
