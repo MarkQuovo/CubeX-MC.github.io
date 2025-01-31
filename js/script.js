@@ -104,7 +104,7 @@ async function fetchServerStatus() {
         if (data.players && data.players.list && data.players.list.length > 0) {
             data.players.list.forEach(player => {
                 const li = document.createElement('li');
-                li.textContent = player;
+                li.textContent = player.name; // 确保使用正确的属性名
                 playerList.appendChild(li);
             });
         } else {
@@ -119,5 +119,5 @@ async function fetchServerStatus() {
 // 页面加载后自动刷新状态
 document.addEventListener('DOMContentLoaded', () => {
     fetchServerStatus();
-    setInterval(fetchServerStatus, 600000); // 每10秒刷新一次
+    setInterval(fetchServerStatus, 600000); // 每10分钟刷新一次
 });

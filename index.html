@@ -10,9 +10,9 @@
     <link rel="icon" href="imgs/server-icon.png" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <!-- 导航栏 -->
-        <nav class="navbar navbar-expand-md navbar-dark">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container">
             <a href="#" class="navbar-brand">
                 <img src="imgs/server-icon.png" alt="CubeX icon" width="32" height="32" class="d-inline-block align-bottom">
                 <span class="hidden"><b>方块叉 CubeX</b></span>
@@ -31,12 +31,12 @@
                     <li><a class="nav-link" target="_blank" href="https://discord.gg/QBN7wPydh7">Discord</a></li>
                 </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     <div class="container">
         <!-- 标题和IP -->
-        <div class="row text-center">
+        <div class="row text-center mt-5">
             <h1 class="text-shadow">
                 <b><span style="color:rgb(202, 0, 0)">Cube</span>X</b> 养老服务器
             </h1>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- 按钮 -->
-        <div class="row text-center">
+        <div class="row text-center mb-5">
             <a target="_blank" href="https://www.bilibili.com/video/BV1Je411V7ko/" class="btn btn-danger">
                 <b>宣传片</b>
             </a>
@@ -54,52 +54,56 @@
             </a>
         </div>
 
-        <!-- 服务器状态 -->
+        <!-- 服务器状态和在线玩家列表 -->
         <div class="row text-center">
             <div class="card">
-                <h2>🟢 实时状态</h2>
-                <div id="server-status">
+                <h2 class="card-header">🟢 实时状态</h2>
+                <div class="card-body">
                     <p>状态: <span id="status">加载中...</span></p>
                     <p>在线玩家: <span id="online-players">0</span>/<span id="max-players">20</span></p>
                     <p>版本: <span id="server-version">加载中...</span></p>
+                    <h3 class="mt-4">👥 在线玩家</h3>
+                    <ul id="player-list">
+                        <li>正在获取玩家列表...</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <!-- 在线玩家列表 -->
-        <div class="row text-center">
-            <div class="card">
-                <h2>👥 在线玩家</h2>
-                <ul id="player-list">
-                    <li>正在获取玩家列表...</li>
-                </ul>
+        <!-- 管理团队和建筑团队 -->
+        <div class="row text-center mt-5">
+            <div class="card mb-4">
+                <h2 class="card-header">👑 退休团队</h2>
+                <div class="card-body">
+                    <p>
+                        00 | <a target="_blank" href="http://angushushu.com" style="text-decoration:none; color:white;">angushushu</a> | AkariDream | [退休]Furiina | [退休]heckteck<br>
+                        [退休]linzaiua | <a target="_blank" href="https://siyangchen.com/" style="text-decoration:none; color:white;">SiYang</a> | [退休]Tomeggo<br>
+                        [退休]XY_kuailexy | <a target="_blank" href="https://blog.hotwind.cc" style="text-decoration:none; color:white;">HotWind</a><br>
+                        <a target="_blank" href="https://adlambxd.github.io" style="text-decoration:none; color:white;">yzh</a> | <a target="_blank" href="https://zh-cn.namemc.com/profile/NinKauneus.1" style="text-decoration:none; color:white;">NinKauneus</a> | [退休]Mark_Q | <a target="_blank" href="adlambxd.github.io" style="text-decoration:none; color:white;">AdLamb</a>
+                    </p>
+                </div>
             </div>
-        </div>
-
-        <!-- 管理团队 -->
-        <div class="row text-center">
-            <div class="card">
-                <h2>👑 管理团队</h2>
-                <p>
-                    [退休]00 | <a target="_blank" href="http://angushushu.com" style="text-decoration:none; color:white;">[退休]angushushu</a> | [退休]AkariDream | fire_God | [退休]Furiina | [退休]heckteck<br>
-                    <a target="_blank" href="https://space.bilibili.com/3732751" style="text-decoration:none; color:white;">[退休]linzaiua</a> | <a target="_blank" href="https://siyangchen.com/" style="text-decoration:none; color:white;">SiYang</a> | [退休]Tomeggo<br>
-                    <a target="_blank" href="http://www.miaomoe.net" style="text-decoration:none; color:white;">[退休]XY_kuailexy</a> | <a target="_blank" href="https://blog.hotwind.cc" style="text-decoration:none; color:white;">HotWind</a><br>
-                    <a target="_blank" href="https://adlambxd.github.io" style="text-decoration:none; color:white;">yzh</a> | <a target="_blank" href="https://zh-cn.namemc.com/profile/NinKauneus.1" style="text-decoration:none; color:white;">NinKauneus</a> | Mark_Q | <a target="_blank" href="adlambxd.github.io" style="text-decoration:none; color:white;">AdLamb</a>
-                </p>
+            <div class="card mb-4">
+                <h2 class="card-header">👷‍♂️ 在职团队</h2>
+                <div class="card-body">
+                    <p>
+                        fire_God | HotWind | SiYang | yzh | NinKauneus | Mark_Q | AdLamb
+                    </p>
+                </div>
             </div>
-        </div>
-
-        <!-- 建筑团队 -->
-        <div class="row text-center">
-            <div class="card">
-                <h2>🏗️ 建筑团队</h2>
-                <p>qorhe | wudimoyuren</p>
+            <div class="card mb-4">
+                <h2 class="card-header">🚧 试用团队</h2>
+                <div class="card-body">
+                    <p>
+                        qorhe | wudimoyuren
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- 页脚 -->
-    <footer class="text-center">
+    <footer class="text-center mt-5">
         <p>© 2023 方块叉 CubeX | 由 GitHub Pages 托管</p>
     </footer>
 
