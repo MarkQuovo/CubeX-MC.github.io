@@ -55,6 +55,7 @@ header {
 
 .navbar-dark {
     background-color: #2d2d2d;
+    height: 50px; /* 减小导航栏高度 */
 }
 
 .btn {
@@ -66,7 +67,7 @@ header {
 }
 
 .container {
-    margin-top: 2rem;
+    margin-top: 1rem; /* 调整容器顶部外边距 */
 }
 
 .navbar-nav {
@@ -74,7 +75,12 @@ header {
 }
 
 .navbar-nav .nav-link {
-    margin-right: 1rem;
+    margin-right: 0.5rem; /* 减小导航栏链接之间的间距 */
+    font-size: 0.8rem; /* 减小导航栏字体大小 */
+}
+
+.navbar-brand {
+    font-size: 1rem; /* 调整品牌名称字体大小 */
 }
 
 .row.text-center {
