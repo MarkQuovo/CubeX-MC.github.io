@@ -46,3 +46,44 @@ header {
         gap: 20px;
     }
 }
+
+/* 新增样式 */
+.hidden {
+    display: none;
+}
+
+.navbar-dark {
+    background-color: #2d2d2d;
+}
+
+.btn {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.container {
+    margin-top: 2rem;
+}
+
+.navbar-nav {
+    margin-right: 0;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 1rem;
+}
+
+.row.text-center {
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin-top: 4rem;
+}

@@ -79,3 +79,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // 页面卸载时清理定时器
     window.addEventListener('beforeunload', () => clearInterval(interval));
 });
+
+// 获取服务器状态
+async function fetchServerStatus() {
+    const SERVER_IP = 'play.cubexmc.top'; // 修改为你的服务器IP
+    const API_URL = `https://api.mcsrvstat.us/2/${SERVER_IP}`;
+
+    try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+
+        // 添加调试信息
+        console.log('API Response:', data);
+
+        // 更新服务器状态
+        document.getElementById('status').textContent = data.online ? '在线' : '离线';
+        document.getElementById('online-players').textContent = data.players ? data.players.online : '0';
+        document.getElementById('max-players').textContent = data.players ? data.players.max : '0';
+        document.getElementById('server-version').textContent = data.version || '未知';
+
+        // 更新在线玩家列表
+        const playerList = document.getElementById('player-list');
+        playerList.innerHTML = '';
+        if (data.players && data.players.list && data.players.list.length > 0) {
+            data.players.list.forEach(player => {
+                const li = document.createElement('li');
+                li.textContent = player;
+                playerList.appendChild(li);
+            });
+        } else {
+            playerList.innerHTML = '<li>暂无在线玩家</li>';
+        }
+    } catch (error) {
+        console.error('获取服务器状态失败:', error);
+        document.getElementById('server-status').innerHTML = '<p>❌ 服务器状态获取失败</p>';
+    }
+}
+
+// 页面加载后自动刷新状态
+document.addEventListener('DOMContentLoaded', () => {
+    fetchServerStatus();
+    setInterval(fetchServerStatus, 10000); // 每10秒刷新一次
+});
