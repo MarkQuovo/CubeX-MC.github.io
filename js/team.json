@@ -9,6 +9,7 @@
         { "name": "Morgen_MC" },
         { "name": "NinKauneus" },
         { "name": "Qreakee" },
+        { "name": "AkariDream" },
         { "name": "Ricky" }
     ],
     "trial_team": [
@@ -17,7 +18,6 @@
         { "name": "Ender" }
     ],
     "retired_team": [
-        { "name": "AkariDream" },
         { "name": "angushushu", "url": "http://angushushu.com" },
         { "name": "fire_god" },
         { "name": "Furiina" },
