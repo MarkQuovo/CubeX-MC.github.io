@@ -1,13 +1,9 @@
 {
     "management_team": [
         { "name": "Adlamb", "url": "https://adlambxd.github.io" },
-        { "name": "Bedrock_DragonXG" },
         { "name": "Brilliant_Boboo" },
-        { "name": "Ender" },
         { "name": "GNBM" },
-        { "name": "Herobrine" },
-        { "name": "HXLS" },
-        { "name": "janhous" },
+        { "name": "janhous", "url": "https://github.com/janhous233" },
         { "name": "Jason31416" },
         { "name": "Mark_Q" },
         { "name": "Morgen_MC" },
@@ -16,7 +12,9 @@
         { "name": "Ricky" }
     ],
     "trial_team": [
-        { "name": "wudimoyuren" }
+        { "name": "wudimoyuren" },
+        { "name": "Bedrock_DragonXG" },
+        { "name": "Ender" }
     ],
     "retired_team": [
         { "name": "AkariDream" },
