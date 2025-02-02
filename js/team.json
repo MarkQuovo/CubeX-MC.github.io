@@ -1,0 +1,34 @@
+{
+    "management_team": [
+        { "name": "Adlamb", "url": "https://adlambxd.github.io" },
+        { "name": "Brilliant_Boboo" },
+        { "name": "GNBM" },
+        { "name": "janhous", "url": "https://github.com/janhous233" },
+        { "name": "Jason31416" },
+        { "name": "Mark_Q" },
+        { "name": "Morgen_MC" },
+        { "name": "NinKauneus" },
+        { "name": "Qreakee" },
+        { "name": "AkariDream" },
+        { "name": "Ricky" }
+    ],
+    "trial_team": [
+        { "name": "wudimoyuren" },
+        { "name": "Bedrock_DragonXG" },
+        { "name": "Ender" }
+    ],
+    "retired_team": [
+        { "name": "angushushu", "url": "http://angushushu.com" },
+        { "name": "fire_god" },
+        { "name": "Furiina" },
+        { "name": "heckteck" },
+        { "name": "HotWind", "url": "https://blog.hotwind.cc" },
+        { "name": "linzaiua" },
+        { "name": "qorhe" },
+        { "name": "RoiAsn" },
+        { "name": "Shioeaxiki" },
+        { "name": "SiYang", "url": "https://siyangchen.com/" },
+        { "name": "Tao_xiaobai" },
+        { "name": "Tomeggo" }
+    ]
+}
