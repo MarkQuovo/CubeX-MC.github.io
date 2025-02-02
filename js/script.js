@@ -1,35 +1,56 @@
+// js/script.js
 // 获取服务器状态 mcstatus.io API
 async function fetchServerStatus(server) {
-    const API_URL = `https://api.mcsrvstat.us/2/${server.ip}`;
-
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(`https://api.mcsrvstat.us/2/${server.ip}`);
         const data = await response.json();
 
-        // 添加调试信息
-        console.log(`API Response for ${server.name}:`, data);
+        // 调试信息
+        console.log(`Server Data for ${server.name}:`, data);
 
-        // 更新服务器状态
-        document.getElementById(`status-${server.id}`).textContent = data.online ? '在线' : '离线';
-        document.getElementById(`online-players-${server.id}`).textContent = data.players ? data.players.online : '0';
-        document.getElementById(`max-players-${server.id}`).textContent = data.players ? data.players.max : '0';
-        document.getElementById(`server-version-${server.id}`).textContent = data.version || '未知';
+        // 获取状态元素
+        const statusElement = document.getElementById(`status-${server.id}`);
+        const onlinePlayersElement = document.getElementById(`online-players-${server.id}`);
+        const maxPlayersElement = document.getElementById(`max-players-${server.id}`);
+        const serverVersionElement = document.getElementById(`server-version-${server.id}`);
 
-        // 更新在线玩家列表
-        const playerList = document.getElementById(`player-list-${server.id}`);
-        playerList.innerHTML = '';
-        if (data.players && data.players.list && data.players.list.length > 0) {
-            data.players.list.forEach(player => {
-                const li = document.createElement('li');
-                li.textContent = player;
-                playerList.appendChild(li);
-            });
+        // 更新状态
+        if (data.online) {
+            statusElement.textContent = '在线🟢';
+            statusElement.classList.add('status-online');
+            statusElement.classList.remove('status-offline');
         } else {
-            playerList.innerHTML = '<li>暂无在线玩家</li>';
+            statusElement.textContent = '离线🔴';
+            statusElement.classList.add('status-offline');
+            statusElement.classList.remove('status-online');
         }
+
+        // 更新在线玩家数
+        onlinePlayersElement.textContent = data.players ? data.players.online : 0;
+
+        // 更新最大玩家数
+        maxPlayersElement.textContent = data.players ? data.players.max : 20;
+
+        // 更新服务器版本
+        if (typeof data.version === 'string') {
+            serverVersionElement.textContent = data.version;
+        } else if (data.version && data.version.name) {
+            serverVersionElement.textContent = data.version.name;
+        } else if (data.version) {
+            serverVersionElement.textContent = '版本信息不完整';
+            console.warn(`版本信息不完整 for ${server.name}:`, data.version);
+        } else {
+            serverVersionElement.textContent = '版本信息不可用';
+            console.warn(`版本信息不可用 for ${server.name}`);
+        }
+
     } catch (error) {
-        console.error(`获取服务器状态失败 (${server.name}):`, error);
-        document.getElementById(`server-status-${server.id}`).innerHTML = '<p>❌ 服务器状态获取失败</p>';
+        console.error(`获取 ${server.name} 状态失败:`, error);
+        const statusElement = document.getElementById(`status-${server.id}`);
+        statusElement.textContent = '离线🔴';
+        statusElement.classList.add('status-offline');
+        statusElement.classList.remove('status-online');
+        serverVersionElement.textContent = '加载失败';
     }
 }
 
