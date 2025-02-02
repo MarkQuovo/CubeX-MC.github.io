@@ -1,7 +1,7 @@
 // 读取并显示管理团队、试用团队和退休团队的名单
 async function fetchTeamData() {
     try {
-        const response = await fetch('/servers.json'); // 修改路径
+        const response = await fetch('js/servers.json'); // 修改路径
         const data = await response.json();
 
         // 调试信息
